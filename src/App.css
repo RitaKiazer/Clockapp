@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: linear-gradient(to right, hsl(302, 51%, 88%), hsl(0, 81%, 40%));
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.clock{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 50%;
+    border: 2px solid rgb(0, 0, 0);
+    position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clock .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 1.5rem;
+}
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 120deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
+
+.clock .hand-second, .clock .hand-minute,.clock .hand-hour{
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid rgb(163, 162, 162);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) ;
+}
+
+.clock .hand-second {
+  width: 3px;
+  height: 45%;
+  background-color: red;
+}
+
+.clock .hand-minute {
+  width: 7px;
+  height: 40%;
+  background-color: black;
+  transform: translateX(-50%)
+}
+
+.clock .hand-hour {
+  width: 10px;
+  height: 25%;
+  background-color: black;
 }
