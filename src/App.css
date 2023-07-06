@@ -1,5 +1,3 @@
-
-
 body {
   background: linear-gradient(to right, hsl(302, 51%, 88%), hsl(0, 81%, 40%));
   display: flex;
@@ -14,8 +12,24 @@ body {
     height: 300px;
     background-color: rgba(255, 255, 255, .8);
     border-radius: 50%;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(134, 204, 215);
+    box-shadow: 0 -15px 15px rgba(187, 66, 243, 0.825),
+                inset 0 -15px 15px rgb(187, 66, 243, 0.825),
+                0 15px 15px rgba(106, 0, 205, 0.863),
+                inset 0 15px 15px rgba(106, 0, 205, 0.863);
     position: relative;
+}
+.clock::after {
+  content: '';
+  position: absolute;
+  background-color: rgb(122, 150, 157);
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
 
 .clock .number {

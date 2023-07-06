@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect} from "react"
 
 function App() {
   const [now, setTime] = useState(new Date());
@@ -18,7 +18,7 @@ function App() {
     <div className="clock">
       <div className="hand-second" style={{transform: `translateX(-50%) rotate(calc(${second * 360}* 1deg))`}}> </div>
       <div className="hand-minute" style={{transform: `translateX(-50%) rotate(calc(${min * 360}* 1deg))`}}> </div>
-      <div className="hand-hour" style={{transform: `translateX(-50%) rotate(calc(${hour * 360}* 1deg))`}}> 2</div>
+      <div className="hand-hour" style={{transform: `translateX(-50%) rotate(calc(${hour * 360}* 1deg))`}}> </div>
       <div className="number number1">1</div>
       <div className="number number2">2</div>
       <div className="number number3">3</div>
